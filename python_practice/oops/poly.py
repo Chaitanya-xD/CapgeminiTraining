@@ -3,6 +3,7 @@ class Cat:
     print("Meow")
 
 class Dog:
+  def sound(self):
     print("Dog")
 
 for animal in [ Cat(), Dog() ]:
