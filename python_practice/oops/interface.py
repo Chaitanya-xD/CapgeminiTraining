@@ -1,16 +1,26 @@
 from abc import ABC, abstractmethod
 
-class Iface:
+class Message:
   @abstractmethod
-  def impMethod1(self):
-    pass
-  def impMethod2(self):
+  def send(self):
     pass
 
-class chil(Iface):
-  def impMethod1(self):
-    print("Hello")
+class Email(Message):
+  def send(self):
+    print("Sending an email")
 
-  def impMethod2(self):
-    print("Hello 2")
+class SMS(Message):
+  def send(self):
+    print("Sending a SMS")
 
+class WhatsApp(Message):
+  def send(self):
+    print("Sending a WhatsApp Message")
+
+email = Email() 
+sms = SMS() 
+whatsapp = WhatsApp() 
+
+email.send()
+sms.send()
+whatsapp.send()
